@@ -10,4 +10,4 @@ do
 done
 printf "%s" "   OK"
 echo
-sleep 10  # Wait for system clock update after boot
+sleep 3

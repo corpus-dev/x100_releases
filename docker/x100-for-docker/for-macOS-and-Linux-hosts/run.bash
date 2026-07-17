@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-./wait-for-internet.bash
-
 export PATH="/sbin:$PATH"   # Fix fro Debian
 cd "$(dirname "$BASH_SOURCE")"
 cd ../
 scriptsRoot="$(pwd)"
+
+$scriptsRoot/for-macOS-and-Linux-hosts/wait-for-internet.bash
 
 cat "$scriptsRoot/for-macOS-and-Linux-hosts/sysctl-settings.txt" | while read line || [[ -n $line ]];
 do
    sysctl "$line"
 done
 
-beforeRunCustomScript="./for-macOS-and-Linux-hosts/custom-script-before-run.bash"
+beforeRunCustomScript="$scriptsRoot/for-macOS-and-Linux-hosts/custom-script-before-run.bash"
 if [ -f "$beforeRunCustomScript" ]; then
     $beforeRunCustomScript
 fi
@@ -20,7 +20,7 @@ fi
 cd "$scriptsRoot"
 
 
-imageTag="tag-20260704.0954"
+imageTag="tag-20260717.2209"
 imageLocal=x100-image-local
 imageLocalPath="$scriptsRoot/${imageLocal}.tar"
 
