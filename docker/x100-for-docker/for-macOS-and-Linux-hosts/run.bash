@@ -20,7 +20,7 @@ fi
 cd "$scriptsRoot"
 
 
-imageTag="tag-20260730.1310"
+imageTag="tag-20260812.1852"
 imageLocal=x100-image-local
 imageLocalPath="$scriptsRoot/${imageLocal}.tar"
 
