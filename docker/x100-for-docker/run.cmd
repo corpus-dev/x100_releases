@@ -2,7 +2,7 @@
 setlocal EnableDelayedExpansion 
 set container=x100-container-amd64
 
-set imageTag=tag-20261015.1955
+set imageTag=tag-20261029.0129
 set image=tempestobserver/x100-image-amd64:!imageTag!
 
 set imageLocal=x100-image-local
